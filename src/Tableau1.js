@@ -31,6 +31,7 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('gMushroom1', 'assets/level/ground/g-mushroom1.png');
         this.load.image('gVineA', 'assets/level/ground/g-vine-a.png');
         this.load.image('gVineB', 'assets/level/ground/g-vine-b.png');
+        this.load.image('gVineB', 'assets/level/ground/g-vine-b.png');
         this.load.image('gVineC', 'assets/level/ground/g-vine-c.png');
         this.load.image('gVineC', 'assets/level/ground/g-vine-c.png');
 
