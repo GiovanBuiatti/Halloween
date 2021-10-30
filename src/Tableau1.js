@@ -25,6 +25,8 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('gMid', 'assets/level/ground/g-mid.png');
         this.load.image('gRight', 'assets/level/ground/g-right.png');
         this.load.image('gTree1', 'assets/level/ground/g-tree-1.png');
+        this.load.image('gTree2', 'assets/level/ground/g-tree-2.png');
+        this.load.image('gTree2', 'assets/level/ground/g-tree-2.png');
         this.load.image('gWater', 'assets/level/ground/g-water.png');
         this.load.image('gWoodenBridge', 'assets/level/ground/g-wooden-bridge.png');
         this.load.image('gBox2', 'assets/level/ground/g-box-2.png');
@@ -101,8 +103,18 @@ class Tableau1 extends Phaser.Scene{
          * Terrain
          * @type {Phaser.GameObjects.Image}
          */
-        let bg1Terrain3=this.add.image(-300,200, 'bg1-terrain-3').setOrigin(0,0);
+        let bg1Terrain3=this.add.image(-300,180, 'bg1-terrain-3').setOrigin(0,0);
         this.bg1Container.add(bg1Terrain3);
+        /**
+         * Arbre à gauche
+         */
+        let bg1Tree1=this.add.image(-40,-180, 'bg1-tree-1').setOrigin(0,0);
+        this.bg1Container.add(bg1Tree1);
+        /**
+         * Arbre à gauche 2
+         */
+        let bg1Tree3=this.add.image(150,-180, 'bg1-tree-3').setOrigin(0,0);
+        this.bg1Container.add(bg1Tree3);
 
         //-------------ground (premier plan noir)---------------------------
 
@@ -115,9 +127,14 @@ class Tableau1 extends Phaser.Scene{
          * Arbre
          * @type {Phaser.GameObjects.Image}
          */
+
         let tree1=this.add.image(300,350, 'gTree1').setOrigin(0,1);
-        tree1.setTintFill(0xFF0000); // pratique pour dbugger
         this.groundContainer.add(tree1);
+        /**
+         * Eau
+         */
+        let water=this.add.image(600,630, 'gWater').setOrigin(0,1);
+        this.groundContainer.add(water);
         /**
          * Terrain 1
          * @type {Phaser.GameObjects.Image}
@@ -137,6 +154,29 @@ class Tableau1 extends Phaser.Scene{
          */
         let gMid3=this.add.image(gMid2.x+gMid2.width,350, 'gRight').setOrigin(0,0);
         this.groundContainer.add(gMid3);
+        /**
+         * Pont
+         */
+        let woodenBridge=this.add.image(550,400, 'gWoodenBridge').setOrigin(0,1);
+        this.groundContainer.add(woodenBridge);
+        /**
+         * Caisse
+         */
+        let box2=this.add.image(665,355, 'gBox2').setOrigin(0,1);
+        this.groundContainer.add(box2);
+        box2.angle=5;
+        /**
+         * Champignon
+         */
+        let mushroom1=this.add.image(200,355, 'gMushroom1').setOrigin(0,1);
+        this.groundContainer.add(mushroom1);
+        /**
+         * Arbre à gauche 1
+         */
+        let tree2=this.add.image(85,400, 'gTree2').setOrigin(0,1);
+        this.groundContainer.add(tree2);
+
+
         /**
          * De l'herbe en textures qui se répète
          * @type {Phaser.GameObjects.TileSprite}
