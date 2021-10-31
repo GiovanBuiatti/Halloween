@@ -257,6 +257,11 @@ class Tableau1 extends Phaser.Scene{
         let gMid3=this.add.image(gMid2.x+gMid2.width,350, 'gRight').setOrigin(0,0);
         this.groundContainer.add(gMid3);
         /**
+         * Terrain pour cacher la ligne de pixel
+         */
+        let mid=this.add.image(100,750, 'gMid').setOrigin(0,1);
+        this.groundContainer.add(mid);
+        /**
          * Terrain à droite
          */
         let left=this.add.image(970,750, 'gLeft').setOrigin(0,1);
@@ -330,7 +335,7 @@ class Tableau1 extends Phaser.Scene{
         //initialise ce qui se passe avec le clavier
         this.initKeyboard();
         // Définit l'espace de déplacement de la caméra
-        this.cameras.main.setBounds(0, 0, 2000, 540);
+        this.cameras.main.setBounds(0, 0, 1300, 540);
         //définit à quelles vitesse se déplacent nos différents plans
         bgAnimationA.scrollFactorX=0;
         this.filterFilm.scrollFactorX=0;
