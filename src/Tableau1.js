@@ -73,7 +73,7 @@ class Tableau1 extends Phaser.Scene{
         }
         //filtre rain
         for(let r=1;r<=3;r++){
-            this.load.image('filterFilm'+r, 'assets/level/weather/rain/frame'+ r +'.png');
+            this.load.image('rain'+r, 'assets/level/weather/rain/frame'+ r +'.png');
         }
         //texture au fond  TODO élève : faire une boucle pour charger les 3 images et démontrer par la même que vous savez aller au plus simple
         for(let n=1;n<=3;n++){
@@ -494,7 +494,48 @@ class Tableau1 extends Phaser.Scene{
             repeat: -1
         });
         this.filterFilm.play('film');
-
+        /**
+         * filtre rain
+         */
+        this.rain = this.add.sprite(0, 0, 'weatherRain').setOrigin(0,0);
+        //animation de 3 images
+        this.anims.create({
+            key: 'rain',
+            frames: [
+                {key:'rain1'},
+                {key:'rain2'},
+                {key:'rain3'},
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+        this.rain.play('rain');
+        this.rain = this.add.sprite(900, 0, 'weatherRain').setOrigin(0,0);
+        //animation de 3 images
+        this.anims.create({
+            key: 'rain',
+            frames: [
+                {key:'rain1'},
+                {key:'rain2'},
+                {key:'rain3'},
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+        this.rain.play('rain');
+        this.rain = this.add.sprite(1800, 0, 'weatherRain').setOrigin(0,0);
+        //animation de 3 images
+        this.anims.create({
+            key: 'rain',
+            frames: [
+                {key:'rain1'},
+                {key:'rain2'},
+                {key:'rain3'},
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+        this.rain.play('rain');
         //TODO élève faire une animation du même genre que filter mais pour bgAnimationA
 
         //gestion du parallaxe
