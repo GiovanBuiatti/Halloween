@@ -7,6 +7,7 @@ class Tableau1 extends Phaser.Scene{
      * Précharge les assets
      */
     preload(){
+
         //bg 2 (tout au fond et très flou)
         this.load.image('bg2-terrain-2', 'assets/level/background-2/bg2-terrain-2.png');
         this.load.image('bg2-terrain-4', 'assets/level/background-2/bg2-terrain-4.png');
@@ -65,6 +66,12 @@ class Tableau1 extends Phaser.Scene{
         // ALGO : ceci est une boucle
         for(let i=1;i<=5;i++){
             this.load.image('g-grass-'+i, 'assets/level/ground/g-grass-'+i+'.png');
+        }
+
+        // boucle anim idle perso
+
+        for(let k=1;k<=10;k++){
+            this.load.image('animation'+k, 'assets/characters/boy/boy_style_1/PNG/idle/layer-'+k+'.png');
         }
 
         //filtre film TODO élève : faire une boucle à la place des 3 lignes qui suivent
@@ -494,6 +501,34 @@ class Tableau1 extends Phaser.Scene{
             repeat: -1
         });
         this.filterFilm.play('film');
+        /**
+         * personnage
+         */
+
+            this.idle = this.add.sprite(0, 0, 'animation').setOrigin(0,0);
+            this.anims.create({
+                key: 'animation',
+                frames: this.getFrames("animation",10),
+                frameRate: 12,
+                repeat: -1
+            });
+            this.idle.play('animation');
+
+        }
+
+        /**
+         * Renvoie un tableau d'images
+         * @param prefix
+         * @param length
+         * @returns {*[]}
+         */
+        getFrames(prefix,length){
+            let frames=[];
+            for (let i=1;i<=length;i++){
+                frames.push({key: prefix+i});
+            }
+            return frames;
+
         /**
          * filtre rain
          */
