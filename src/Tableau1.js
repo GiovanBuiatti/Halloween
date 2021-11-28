@@ -496,7 +496,6 @@ class Tableau1 extends Phaser.Scene{
         this.groundContainer.add(zombieZ13Bis);
         zombieZ13Bis.angle=60
         /**
-<<<<<<< HEAD
          * persos
          */
         this.boy = this.add.sprite(570, 100, 'animation').setOrigin(0,0);
@@ -591,7 +590,6 @@ class Tableau1 extends Phaser.Scene{
         this.ennemiBAlt.scale=0.7
         this.ennemiBAlt.flipX=true
         /**
-=======
          * perso
          */
         this.boy = this.add.sprite(0, 200, 'animation').setOrigin(0,0);
@@ -634,7 +632,6 @@ class Tableau1 extends Phaser.Scene{
 
 
         /**
->>>>>>> 8d2eb54362b6616323473ae88b4b29615efe6cca
          * filtre type film au premier plan
          * @type {Phaser.GameObjects.Sprite}
          */
