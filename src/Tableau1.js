@@ -71,6 +71,7 @@ class Tableau1 extends Phaser.Scene{
         for(let e=1;e<=3;e++){
             this.load.image('filterFilm'+e, 'assets/level/filters/bloody/frame'+ e +'.png');
         }
+<<<<<<< HEAD
         //anim du petit gars
         for(let k=1;k<=10;k++) {
             this.load.image('idle' + k, 'assets/Characters/boy/boy_style_1/PNG/idle/idleBoy' + k + '.png');
@@ -82,6 +83,13 @@ class Tableau1 extends Phaser.Scene{
         //anim des ennemies volants
         for(let u=1;u<=6;u++) {
             this.load.image('idleEnnemiB' + u, 'assets/Characters/enemy 2/PNG/idle/idleEnnemib' + u + '.png');
+=======
+        for(let k=1;k<=10;k++) {
+            this.load.image('layer' + k, 'assets/characters/boy/boy_style_1/PNG/idle/layer-' + k + '.png');
+        }
+        for(let k=1;k<=8;k++) {
+            this.load.image('Layer' + k, 'assets/characters/boy/boy_style_1/PNG/run/Layer-' + k + '.png');
+>>>>>>> 8d2eb54362b6616323473ae88b4b29615efe6cca
         }
         //filtre rain
         for(let r=1;r<=3;r++){
@@ -490,6 +498,7 @@ class Tableau1 extends Phaser.Scene{
         this.groundContainer.add(zombieZ13Bis);
         zombieZ13Bis.angle=60
         /**
+<<<<<<< HEAD
          * persos
          */
         this.boy = this.add.sprite(570, 100, 'animation').setOrigin(0,0);
@@ -584,6 +593,50 @@ class Tableau1 extends Phaser.Scene{
         this.ennemiBAlt.scale=0.7
         this.ennemiBAlt.flipX=true
         /**
+=======
+         * perso
+         */
+        this.boy = this.add.sprite(0, 200, 'animation').setOrigin(0,0);
+        //animation de 10 images
+        this.anims.create({
+            key: 'idle',
+            frames: [
+                {key:'layer1'},
+                {key:'layer2'},
+                {key:'layer3'},
+                {key:'layer4'},
+                {key:'layer5'},
+                {key:'layer6'},
+                {key:'layer7'},
+                {key:'layer8'},
+                {key:'layer9'},
+                {key:'layer10'},
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+        this.boy.play('idle');
+        this.boy.scale=0.5
+        this.anims.create({
+            key: 'run',
+            frames: [
+                {key:'Layer1'},
+                {key:'Layer2'},
+                {key:'Layer3'},
+                {key:'Layer4'},
+                {key:'Layer5'},
+                {key:'Layer6'},
+                {key:'Layer7'},
+                {key:'Layer8'},
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+
+
+
+        /**
+>>>>>>> 8d2eb54362b6616323473ae88b4b29615efe6cca
          * filtre type film au premier plan
          * @type {Phaser.GameObjects.Sprite}
          */
@@ -677,6 +730,17 @@ class Tableau1 extends Phaser.Scene{
                 case Phaser.Input.Keyboard.KeyCodes.LEFT:
                     me.speed=-4;
                     break;
+<<<<<<< HEAD
+=======
+                case Phaser.Input.Keyboard.KeyCodes.Q:
+                    me.boy.play('run');
+                    me.boy.flipX=true;
+                    me.speedX=1;
+                case Phaser.Input.Keyboard.KeyCodes.D:
+                    me.boy.play('run');
+                    me.boy.flipX=false;
+                    me.speedX=1;
+>>>>>>> 8d2eb54362b6616323473ae88b4b29615efe6cca
 
             }
         });
@@ -686,6 +750,13 @@ class Tableau1 extends Phaser.Scene{
             {
                 case Phaser.Input.Keyboard.KeyCodes.RIGHT:
                 case Phaser.Input.Keyboard.KeyCodes.LEFT:
+<<<<<<< HEAD
+=======
+                case Phaser.Input.Keyboard.KeyCodes.Q:
+                case Phaser.Input.Keyboard.KeyCodes.D:
+                    me.boy.play('idle');
+                    me.speedX=0;
+>>>>>>> 8d2eb54362b6616323473ae88b4b29615efe6cca
                     break;
 
             }
@@ -701,5 +772,11 @@ class Tableau1 extends Phaser.Scene{
 
         //petit effet de vibrance sur le filtre film au tout premier plan
         this.filterFilm.setAlpha(Phaser.Math.Between(95,100)/100)
+        this.boy.x+=this.speedX;
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8d2eb54362b6616323473ae88b4b29615efe6cca
 }
