@@ -71,7 +71,6 @@ class Tableau1 extends Phaser.Scene{
         for(let e=1;e<=3;e++){
             this.load.image('filterFilm'+e, 'assets/level/filters/bloody/frame'+ e +'.png');
         }
-<<<<<<< HEAD
         //anim du petit gars
         for(let k=1;k<=10;k++) {
             this.load.image('idle' + k, 'assets/Characters/boy/boy_style_1/PNG/idle/idleBoy' + k + '.png');
@@ -83,13 +82,12 @@ class Tableau1 extends Phaser.Scene{
         //anim des ennemies volants
         for(let u=1;u<=6;u++) {
             this.load.image('idleEnnemiB' + u, 'assets/Characters/enemy 2/PNG/idle/idleEnnemib' + u + '.png');
-=======
+
         for(let k=1;k<=10;k++) {
             this.load.image('layer' + k, 'assets/characters/boy/boy_style_1/PNG/idle/layer-' + k + '.png');
         }
         for(let k=1;k<=8;k++) {
             this.load.image('Layer' + k, 'assets/characters/boy/boy_style_1/PNG/run/Layer-' + k + '.png');
->>>>>>> 8d2eb54362b6616323473ae88b4b29615efe6cca
         }
         //filtre rain
         for(let r=1;r<=3;r++){
