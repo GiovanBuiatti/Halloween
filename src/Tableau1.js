@@ -82,7 +82,7 @@ class Tableau1 extends Phaser.Scene{
         //anim des ennemies volants
         for(let u=1;u<=6;u++) {
             this.load.image('idleEnnemiB' + u, 'assets/Characters/enemy 2/PNG/idle/idleEnnemib' + u + '.png');
-
+        }
         for(let k=1;k<=10;k++) {
             this.load.image('layer' + k, 'assets/characters/boy/boy_style_1/PNG/idle/layer-' + k + '.png');
         }
@@ -728,8 +728,7 @@ class Tableau1 extends Phaser.Scene{
                 case Phaser.Input.Keyboard.KeyCodes.LEFT:
                     me.speed=-4;
                     break;
-<<<<<<< HEAD
-=======
+
                 case Phaser.Input.Keyboard.KeyCodes.Q:
                     me.boy.play('run');
                     me.boy.flipX=true;
@@ -738,7 +737,7 @@ class Tableau1 extends Phaser.Scene{
                     me.boy.play('run');
                     me.boy.flipX=false;
                     me.speedX=1;
->>>>>>> 8d2eb54362b6616323473ae88b4b29615efe6cca
+
 
             }
         });
@@ -748,13 +747,11 @@ class Tableau1 extends Phaser.Scene{
             {
                 case Phaser.Input.Keyboard.KeyCodes.RIGHT:
                 case Phaser.Input.Keyboard.KeyCodes.LEFT:
-<<<<<<< HEAD
-=======
+
                 case Phaser.Input.Keyboard.KeyCodes.Q:
                 case Phaser.Input.Keyboard.KeyCodes.D:
                     me.boy.play('idle');
                     me.speedX=0;
->>>>>>> 8d2eb54362b6616323473ae88b4b29615efe6cca
                     break;
 
             }
@@ -772,9 +769,4 @@ class Tableau1 extends Phaser.Scene{
         this.filterFilm.setAlpha(Phaser.Math.Between(95,100)/100)
         this.boy.x+=this.speedX;
     }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 8d2eb54362b6616323473ae88b4b29615efe6cca
 }
